@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from book.views import book_view
+from phone_app.views import phone_all_view, phone_detail_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('books/', book_view),
+    path('phone/', phone_all_view),
+    path('phone/<int:id>/', phone_detail_view),
 ]
